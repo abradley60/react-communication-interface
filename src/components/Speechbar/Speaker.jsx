@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useSpeechSynthesis } from 'react-speech-kit';
 
-const Example = ({ message }) => {
-    const [text, setText] = useState('I am a robot');
+const Example = (props) => {
+    const message = props.message
+    const [text, setText] = useState(message);
     const [pitch, setPitch] = useState(1);
     const [rate, setRate] = useState(1);
     const [voiceIndex, setVoiceIndex] = useState(null);
@@ -87,12 +88,12 @@ const Example = ({ message }) => {
                             }}
                         />
                     </div>
-                    <label htmlFor="message">{message}</label>
+                    <label htmlFor="message">{props.message}</label>
                     <textarea
                         id="message"
                         name="message"
                         rows={3}
-                        value={text}
+                        value={props.message}
                         onChange={(event) => {
                             setText(event.target.value);
                         }}

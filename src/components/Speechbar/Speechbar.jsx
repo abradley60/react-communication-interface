@@ -3,7 +3,8 @@ import "./speechbar.scss"
 import { MContext } from '../Provider/Provider';
 
 import { RecordVoiceOver, Backspace, AddBox } from "@material-ui/icons";
-import Example from './Speaker';
+//import Example from './Speaker';
+import Example from './Speak';
 
 export default function Speechbar() {
     //const handleClick = false
